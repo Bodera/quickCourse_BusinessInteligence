@@ -1,0 +1,41 @@
+INSERT INTO sales.dimautocategory (autoclassaltid, autoclassname, isnew) VALUES (1, 'SUV', true);
+INSERT INTO sales.dimautocategory (autoclassaltid, autoclassname, isnew) VALUES (2, 'Sedan', true);
+INSERT INTO sales.dimautocategory (autoclassaltid, autoclassname, isnew) VALUES (3, 'Truck', true);
+INSERT INTO sales.dimautocategory (autoclassaltid, autoclassname, isnew) VALUES (4, 'Van', false);
+INSERT INTO sales.dimautocategory (autoclassaltid, autoclassname, isnew) VALUES (5, 'Hatchback', false);
+
+INSERT INTO sales.dimsalesperson (salespersonaltid, salespersonname) VALUES (1, 'John Smith');
+INSERT INTO sales.dimsalesperson (salespersonaltid, salespersonname) VALUES (2, 'Jane Doe');
+INSERT INTO sales.dimsalesperson (salespersonaltid, salespersonname) VALUES (3, 'Bob Johnson');
+
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-01', '1', 'Monday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-02', '2', 'Tuesday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-03', '3', 'Wednesday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-04', '4', 'Thursday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-05', '5', 'Friday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-06', '6', 'Saturday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-07', '7', 'Sunday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-08', '8', 'Monday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-09', '9', 'Tuesday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-10', '10', 'Wednesday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-11', '11', 'Thursday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-12', '12', 'Friday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-13', '13', 'Saturday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-14', '14', 'Sunday', '01', 'January', 'Q1', 'First', 2021);
+INSERT INTO sales.dimdate (date, day, day_of_week, month, month_name, quarter, quarter_name, year) VALUES ('2021-01-15', '15', 'Monday', '01', 'January', 'Q1', 'First', 2021);
+
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (1, 1, 1, 1, 37800.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (2, 2, 2, 1, 11500.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (3, 3, 5, 1, 24500.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (4, 4, 4, 3, 67800.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (5, 5, 3, 3, 41500.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (6, 6, 2, 2, 30000.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (7, 7, 4, 1, 19500.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (8, 8, 5, 3, 27450.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (9, 9, 1, 1, 11890.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (10, 10, 3, 2, 12600.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (11, 11, 4, 1, 47500.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (12, 12, 5, 3, 17000.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (13, 13, 2, 3, 19800.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (14, 14, 3, 2, 16500.00);
+INSERT INTO sales.factautosales (salesid, salesdatekey, autoclassid, salespersonid, amount) VALUES (15, 15, 4, 1, 20400.00);
