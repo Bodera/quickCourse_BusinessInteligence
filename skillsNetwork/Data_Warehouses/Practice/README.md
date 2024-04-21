@@ -6,3 +6,4 @@ Suggested order to read this chapter:
 - [Data Cubes operations and Materialized Views](./Cubes_Rollups_MaterializedViews.md)
 - [Grouping Sets in SQL](./Grouping_Sets_In_Sql.md)
 - [Facts and Dimensional Modeling](./Facts_Dimensional_Modeling.md)
+- [Data Modeling using Star and Snowflake schemas](./Star_and_Snowflake_Modeling.md)
