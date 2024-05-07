@@ -7,3 +7,4 @@ Suggested order to read this chapter:
 - [Grouping Sets in SQL](./Grouping_Sets_In_Sql.md)
 - [Facts and Dimensional Modeling](./Facts_Dimensional_Modeling.md)
 - [Data Modeling using Star and Snowflake schemas](./Star_and_Snowflake_Modeling.md)
+- [Why Star and Snowflake schemas](./Why_Star_and_Snowflake.md)
