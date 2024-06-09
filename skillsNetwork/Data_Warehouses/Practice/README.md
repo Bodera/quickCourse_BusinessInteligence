@@ -10,3 +10,4 @@ Suggested order to read this chapter:
 - [Why Star and Snowflake schemas](./Why_Star_and_Snowflake.md)
 - [Staging Areas for Data Warehouses](./Staging_Areas_for_Data_Warehouses.md)
 - [Verifying Data Quality](./Verifying_Data_Quality.md)
+- [Populating a Data Warehouse](./Populating_a_Data_Warehouse.md)
