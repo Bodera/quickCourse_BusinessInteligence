@@ -4,7 +4,7 @@ Goals of this section:
 
 - Describe star schema modeling in terms of facts and dimensions.
 - Describe snowflake schema as an extension of star schema.
-- Distinguish between star and snowflake schema in term of normalization.
+- Distinguish between star and snowflake schema in terms of normalization.
 
 ## Star schemas
 
@@ -22,7 +22,7 @@ Star schemas are commonly used to develop specialized data warehouses called _da
 
 ## Snowflake schemas
 
-Snowflake schemas are an generalization of star schemas, and can be seen as normalized star schemas.
+Snowflake schemas are a generalization of star schemas, and can be seen as normalized star schemas.
 
 Normalization means separating the levels or hierarchies of a dimension table into separate child tables.
 
@@ -34,7 +34,7 @@ A schema don't need to be fully normalized to be considered a snowflake, so long
 
 Now we will see some general principles you need to consider when designing a data model for a star schema.
 
-1. Select a business process as the basis for what you want to model (sales, supply chain logistics, etc).
+1. Select a business process as the basis for what you want to model (sales, supply chain logistics, etc.).
 2. Choose the granularity, which is the level of detail that you need to capture. Are you interested in coarse-grained or fine-grained data? Do you want annual regional sales numbers or, maybe you want to drill down into monthly sales performance by salesperson?
 3. Identify the dimensions. Try to gather as much information as possible about the business process. For example, if you want to model sales by product, you may want to identify the product make, model, color, and size.
 4. Identify the facts, these are the measures you want to capture in the business process. For example, if you want to model sales by product, you may want to identify the sales amount and date.
@@ -44,13 +44,13 @@ Now we will see some general principles you need to consider when designing a da
 
 Let's apply the previous considerations to a scenario that you are a data engineer helping to lay out the data ops for a new store called "A2Z Discount Warehouse".
 
-They would like you to develop a data plan to capture everyday POS (point of sale) transactions that happen at the till, where customers have their items scanned and pay for them. Thus, point of sale transactions is the business process that you want to model.
+They would like you to develop a data plan to capture every day POS (point of sale) transactions that happen at the till, where customers have their items scanned and pay for them. Thus, point of sale transactions is the business process that you want to model.
 
 The finest granularity you can expect to capture from POS transactions comes from the individual line items, which is included in the detailed information you can see on a typical store receipt. This is precisely what "A2Z Discount Warehouse" is interested in capturing.
 
 They next step in this process is to identify the dimensions. These include the attributes such as: the date and time of the transaction, the location, the product being sold, store name, and the cashier who processed the transaction. You might add other dimensions, like payment method, whether the line item is a return or a purchase, and perhaps the customer membership number.
 
-Now it's time to consider the facts. Thus, you identify facts such as the amount for each items price, the quantity of each item sold, any disccounts applied to the sale, and the sale taxes applied. Other facts to consider include environmental fees, shipping costs, and other fees like deposit fees for returns.
+Now it's time to consider the facts. Thus, you identify facts such as the amount for each item price, the quantity of each item sold, any discounts applied to the sale, and the sale taxes applied. Other facts to consider include environmental fees, shipping costs, and other fees like deposit fees for returns.
 
 ### Point of sale star schema
 
@@ -78,11 +78,11 @@ This illustrates what a star schema looks like so far:
 
 Let's see how you can use normalization to extend your star schema to a snowflake schema ❄️.
 
-Starting with your star schema, you can extract some of the details of the dimensions tables into their own separate dimensions tables, creating a hierarchy of tables.
+Starting with your star schema, you can extract some details of the dimensions tables into their own separate dimensions tables, creating a hierarchy of tables.
 
 A separate city table can be used to record which city the store is in, while a foreign key *city_id* would be included in the Store table to maintain the link. You might also have tables and keys for the city's state or province, and a pre-defined sales region for the store, and for which country the store resides in.
 
-We'll left out the associated keys for simplicit, so we can continue to normalize other dimensions, like the product's brand, and a product category that it belongs to. The day of week, and the month corresponding to the date, plus the quarter, and so on.
+We left out the associated keys for simplicity, so we can continue to normalize other dimensions, like the product's brand, and a product category that it belongs to. The day of week, and the month corresponding to the date, plus the quarter, and so on.
 
 This normalized version of the star schema is called a snowflake schema, due to its multiple layers of branching which resembles a snowflake pattern.
 

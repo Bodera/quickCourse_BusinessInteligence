@@ -13,11 +13,11 @@ Let's use an example to illustrate the concept of a data cube.
 
 ![Data Cube Illustration](./assets/data_cube.png)
 
-Here is a cube generated from an imaginary star schema for a Sales OLAP (Online Analytical Processing System). The coordinates of the cube are defined by a set of dimensions, which are selected from the star schema. This illustration shows three dimensions , but data cubes **can have many dimensions**.
+Here is a cube generated from an imaginary star schema for a Sales OLAP (Online Analytical Processing System). The coordinates of the cube are defined by a set of dimensions, which are selected from the star schema. This illustration shows three dimensions, but data cubes **can have many dimensions**.
 
-We have the product categories corresponding to the item sold, the state the items were sold from, and the year these products were sold in. These dimensions corresponds to the coordinates in a data cube.
+We have the product categories corresponding to the item sold, the state the items were sold from, and the year these products were sold in. These dimensions correspond to the coordinates in a data cube.
 
-The cells of the cube are defined by a fact of interest from the schema, which could be something like "Total sales in thousand of dolars". Imagine the cell with the value of "243", this would indicate "243 thousand dollars" for some Product, State, and Year combination.
+The cells of the cube are defined by a fact of interest from the schema, which could be something like "Total sales in thousands of dollars". Imagine the cell with the value of "243", this would indicate "243 thousand dollars" for some Product, State, and Year combination.
 
 There are many operations you can perform on data cubes, such as slicing, dicing, drilling up and down, pivoting, and rolling up. Let's go over some examples of these operations, starting with slicing.
 
@@ -90,7 +90,7 @@ NEXT SYSDATE + 1
 AS SELECT * FROM <my_table_name>;
 ```
 
-The script above start by creating and naming a materialized view object called "MY_MAT_VIEW", specifies the refresh type as "FAST", which means "incrementally refresh the data", specify today as the start date, and refresh the view everyday. The final statement selects all data from table "my_table_name".
+The script above start by creating and naming a materialized view object called "MY_MAT_VIEW", specifies the refresh type as "FAST", which means "incrementally refresh the data", specify today as the start date, and refresh the view every day. The final statement selects all data from table "my_table_name".
 
 Here is how you might create a materialized view in PostgreSQL to replicate a table.
 

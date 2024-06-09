@@ -6,7 +6,7 @@ The _GROUPING SETS_ clause is used in conjunction with the _GROUP BY_ clause to 
 
 Recall that the _GROUP BY_ clause allows you to summarize an aggregation such as _SUM_ or _AVG_ over the distinct members, or groups, of a categorical variable or dimension.
 
-You can extend the functionality of the _GROUP BY_ clause using SQL clauses such as _CUBE_ and _ROLLUP_ to select multiple dimensions and create multi-dimensional summaries. These two clauses also generate grand totals, like a report you might see in a spreadsheet application or an accounting style sheet. Just like _CUBE_ and _ROLLUP_, the SQL _GROUPING SETS_ clause allows you to aggregate data over multiple dimensions but does not generate grand totals.
+You can extend the functionality of the _GROUP BY_ clause using SQL clauses such as _CUBE_ and _ROLLUP_ to select multiple dimensions and create multidimensional summaries. These two clauses also generate grand totals, like a report you might see in a spreadsheet application or an accounting style sheet. Just like _CUBE_ and _ROLLUP_, the SQL _GROUPING SETS_ clause allows you to aggregate data over multiple dimensions but does not generate grand totals.
 
 Let's explore more about the _GROUPING SETS_ clause working on a fictional dataset based on the following entity-relationship diagram
 
@@ -81,7 +81,7 @@ GROUP BY
 (5 rows)
 ```
 
-Fairly easy huh? But if we pay attention to the result, because we added a new grouping set to our query (the `isnew` column), we now duplicate the sales person name in some rows, and also if we wanted to know the total sales amount in the `DNsales` materialized view, a new query is still required.
+Fairly easy, huh? But if we pay attention to the result, because we added a new grouping set to our query (the `isnew` column), we now duplicate the sales person name in some rows, and also if we wanted to know the total sales amount in the `DNsales` materialized view, a new query is still required.
 
 So here we will demonstrate the result we want to achieve in two ways, an ugly (because it's difficult to read and has less performance) and a pretty one (because it's more readable and performative).
 
@@ -106,7 +106,7 @@ The above output says the following:
 
 1. Bob Johnson has sold a total of $173,550.00, from that $61,300.00 came from new automobiles, and $112,250 came from old ones.
 
-2. Jane Doe has sold an total amount of $59,100.00 for new automobiles only.
+2. Jane Doe has sold a total amount of $59,100.00 for new automobiles only.
 
 3. John Smith has sold a total of $173,090.00, from that $61,190.00 came from new automobiles, and $111,900 came from old ones.
 
